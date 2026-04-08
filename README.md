@@ -1,4 +1,4 @@
-# Azure AKS Practical Guide
+# Azure Kubernetes Service Practical Guide
 
 Comprehensive guide for running containerized applications on Azure Kubernetes Service (AKS) — from first deployment to production operations.
 
@@ -6,17 +6,17 @@ Comprehensive guide for running containerized applications on Azure Kubernetes S
 
 | Section | Description |
 |---------|-------------|
-| [Start Here](https://yeongseon.github.io/azure-aks-practical-guide/start-here/) | Overview and learning paths |
-| [Platform](https://yeongseon.github.io/azure-aks-practical-guide/platform/) | AKS architecture, networking, node pools |
-| [Best Practices](https://yeongseon.github.io/azure-aks-practical-guide/best-practices/) | Production patterns and security |
-| [Operations](https://yeongseon.github.io/azure-aks-practical-guide/operations/) | Scaling, upgrades, monitoring |
-| [Troubleshooting](https://yeongseon.github.io/azure-aks-practical-guide/troubleshooting/) | Common issues and solutions |
+| [Start Here](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/start-here/) | Overview and learning paths |
+| [Platform](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/platform/) | AKS architecture, networking, node pools |
+| [Best Practices](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/best-practices/) | Production patterns and security |
+| [Operations](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/operations/) | Scaling, upgrades, monitoring |
+| [Troubleshooting](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/troubleshooting/) | Common issues and solutions |
 
 ## Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/yeongseon/azure-aks-practical-guide.git
+git clone https://github.com/yeongseon/azure-kubernetes-service-practical-guide.git
 
 # Install MkDocs dependencies
 pip install mkdocs-material mkdocs-minify-plugin

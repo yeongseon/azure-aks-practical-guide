@@ -4,10 +4,10 @@ Guidance for AI agents working in this repository.
 
 ## Project Overview
 
-**Azure AKS Practical Guide** — a documentation hub for deploying and operating containerized applications on Azure Kubernetes Service (AKS).
+**Azure Kubernetes Service Practical Guide** — a documentation hub for deploying and operating containerized applications on Azure Kubernetes Service (AKS).
 
-- **Live site**: <https://yeongseon.github.io/azure-aks-practical-guide/>
-- **Repository**: <https://github.com/yeongseon/azure-aks-practical-guide>
+- **Live site**: <https://yeongseon.github.io/azure-kubernetes-service-practical-guide/>
+- **Repository**: <https://github.com/yeongseon/azure-kubernetes-service-practical-guide>
 
 ## Repository Structure
 
