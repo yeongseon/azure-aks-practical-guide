@@ -1,56 +1,75 @@
 # Azure AKS Practical Guide
 
-Comprehensive guide for designing, deploying, operating, and troubleshooting Azure Kubernetes Service (AKS) clusters for production workloads.
+Comprehensive, practical documentation for designing, deploying, operating, and troubleshooting containerized applications on Azure Kubernetes Service (AKS).
+
+This site is organized as a learning and operations guide so you can move from fundamentals to production troubleshooting with clear, repeatable workflows.
+
+<div class="grid cards" markdown>
+
+-   :material-rocket-launch:{ .lg .middle } **New to AKS?**
+
+    ---
+
+    Start with platform fundamentals, understand cluster architecture and node pools, and deploy your first AKS cluster.
+
+    [:octicons-arrow-right-24: Start Here](start-here/overview.md)
+
+-   :material-server:{ .lg .middle } **Running Production Workloads?**
+
+    ---
+
+    Apply battle-tested patterns for security, networking, resource governance, reliability, and cost optimization.
+
+    [:octicons-arrow-right-24: Best Practices](best-practices/index.md)
+
+-   :material-bug:{ .lg .middle } **Investigating an Incident?**
+
+    ---
+
+    Jump straight to hypothesis-driven playbooks with real KQL queries and evidence patterns.
+
+    [:octicons-arrow-right-24: Troubleshooting](troubleshooting/index.md)
+
+</div>
+
+## Navigate the Guide
+
+| Section | Purpose |
+|---|---|
+| [Start Here](start-here/overview.md) | Orientation, learning paths, prerequisites, and AKS vs other compute comparison. |
+| [Platform](platform/index.md) | Understand core AKS architecture, node pools, networking, ingress, identity, storage, and scaling. |
+| [Best Practices](best-practices/index.md) | Apply production patterns for security, networking, resource governance, reliability, and cost. |
+| [Tutorials](tutorials/lab-guides/lab-01-aks-cluster-deployment.md) | Follow hands-on lab guides for cluster deployment, ingress, secrets, policy, and disaster recovery. |
+| [Operations](operations/index.md) | Run production clusters with upgrades, scaling, monitoring, maintenance, and credential rotation. |
+| [Troubleshooting](troubleshooting/index.md) | Diagnose pod failures, connectivity issues, node problems, and scaling failures quickly. |
+| [Reference](reference/index.md) | Use quick lookups for CLI, limits, version support, glossary, and diagnostic commands. |
+
+For orientation and study order, start with [Start Here](start-here/overview.md).
+
+## Learning flow
 
 ```mermaid
-graph TD
+flowchart LR
     A[Start Here] --> B[Platform]
     B --> C[Best Practices]
-    C --> D[Operations]
-    D --> E[Troubleshooting]
-    E --> F[Reference]
-    B --> D
-    C --> E
+    C --> D[Tutorials]
+    D --> E[Operations]
+    E --> F[Troubleshooting]
+    F --> G[Reference]
 ```
 
-## What This Guide Covers
+## Scope and disclaimer
 
-| Section | Purpose | Start With |
-|---|---|---|
-| Start Here | Scope, prerequisites, learning sequence, service comparison | [Start Here](start-here/index.md) |
-| Platform | AKS architecture, node pools, networking, ingress, identity, storage, scaling | [Platform](platform/index.md) |
-| Best Practices | Production standards for security, governance, reliability, and cost | [Best Practices](best-practices/index.md) |
-| Operations | Cluster creation, upgrades, scaling, monitoring, maintenance, credential rotation | [Operations](operations/index.md) |
-| Troubleshooting | Decision trees, first-response checklists, and symptom-based playbooks | [Troubleshooting](troubleshooting/index.md) |
-| Reference | CLI, limits, version support, glossary, and diagnostics | [Reference](reference/index.md) |
+This is an independent community project. Not affiliated with or endorsed by Microsoft.
 
-## Quick Start
-
-```bash
-export RG="rg-aks-demo"
-export CLUSTER_NAME="aks-demo"
-export LOCATION="koreacentral"
-
-az group create --name $RG --location $LOCATION
-az aks create     --resource-group $RG     --name $CLUSTER_NAME     --location $LOCATION     --node-count 3     --enable-managed-identity     --network-plugin azure     --network-plugin-mode overlay     --generate-ssh-keys
-az aks get-credentials --resource-group $RG --name $CLUSTER_NAME --overwrite-existing
-kubectl get nodes -o wide
-```
-
-## How to Use This Repository
-
-1. Read **Start Here** if you are new to AKS or comparing Azure compute choices.
-2. Read **Platform** before making design decisions.
-3. Use **Best Practices** to turn concepts into standards.
-4. Use **Operations** for day-2 runbooks.
-5. Use **Troubleshooting** during incidents.
-6. Keep **Reference** open for commands and terminology.
+Primary product reference: [Azure Kubernetes Service (AKS) documentation (Microsoft Learn)](https://learn.microsoft.com/azure/aks/)
 
 ## See Also
 
-- [Start Here](start-here/index.md)
+- [Start Here](start-here/overview.md)
 - [Platform](platform/index.md)
 - [Best Practices](best-practices/index.md)
+- [Tutorials](tutorials/lab-guides/lab-01-aks-cluster-deployment.md)
 - [Operations](operations/index.md)
 - [Troubleshooting](troubleshooting/index.md)
 - [Reference](reference/index.md)
