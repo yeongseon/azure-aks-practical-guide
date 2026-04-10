@@ -55,6 +55,48 @@ az aks create -g $RG -n $CLUSTER_NAME  # ❌ Don't do this
 
 All architectural diagrams use Mermaid. Every documentation page should include at least one diagram.
 
+## Content Source Requirements
+
+All documentation content must be traceable to official Microsoft Learn documentation.
+
+### Source Types
+
+| Type | Description | Allowed? |
+|---|---|---|
+| `mslearn` | Content directly from or based on Microsoft Learn | Required for platform content |
+| `mslearn-adapted` | Microsoft Learn content adapted for this guide | Yes, with source URL |
+| `self-generated` | Original content created for this guide | Requires justification |
+| `community` | Community sources | Not for core content |
+| `unknown` | Source not documented | Must be validated |
+
+### Diagram Source Documentation
+
+Every Mermaid diagram must have source metadata in frontmatter.
+
+```yaml
+content_sources:
+  diagrams:
+    - id: cluster-overview
+      type: flowchart
+      source: mslearn
+      mslearn_url: https://learn.microsoft.com/en-us/azure/aks/
+    - id: troubleshooting-flow
+      type: flowchart
+      source: self-generated
+      justification: "Synthesized from multiple Microsoft Learn articles for clarity"
+      based_on:
+        - https://learn.microsoft.com/en-us/azure/aks/
+        - https://learn.microsoft.com/en-us/azure/aks/concepts-network
+```
+
+### Validation Checklist
+
+1. Add `content_sources` to the YAML frontmatter of any page with diagrams.
+2. Add a `diagram-id` HTML comment before each Mermaid block.
+3. Use `mslearn` or `mslearn-adapted` for platform diagrams.
+4. Use `self-generated` only when a clear justification is provided.
+5. Regenerate the content validation status page after source metadata changes.
+
 ### Tail Section Naming
 
 Every document ends with these sections (in this order):
