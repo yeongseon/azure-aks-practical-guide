@@ -13,6 +13,7 @@ Comprehensive guide for running containerized applications on Azure Kubernetes S
 | [Best Practices](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/best-practices/) | Production patterns and security |
 | [Operations](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/operations/) | Scaling, upgrades, monitoring |
 | [Troubleshooting](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/troubleshooting/) | Common issues and solutions |
+| [Reference](https://yeongseon.github.io/azure-kubernetes-service-practical-guide/reference/) | CLI cheatsheet, glossary, limits and quotas |
 
 ## Quick Start
 
@@ -47,6 +48,7 @@ Contributions welcome. Please ensure:
 | [azure-app-service-practical-guide](https://github.com/yeongseon/azure-app-service-practical-guide) | Azure App Service practical guide |
 | [azure-functions-practical-guide](https://github.com/yeongseon/azure-functions-practical-guide) | Azure Functions practical guide |
 | [azure-container-apps-practical-guide](https://github.com/yeongseon/azure-container-apps-practical-guide) | Azure Container Apps practical guide |
+| [azure-architecture-practical-guide](https://github.com/yeongseon/azure-architecture-practical-guide) | Azure Architecture practical guide |
 | [azure-monitoring-practical-guide](https://github.com/yeongseon/azure-monitoring-practical-guide) | Azure Monitoring practical guide |
 
 ## Disclaimer
